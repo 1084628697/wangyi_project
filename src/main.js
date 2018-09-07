@@ -3,13 +3,22 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-
+import './common/css/reset.css'
+import store from '../src/store'
+import '../src/mock/mockServer'
+import './filters'
+import VueLazyload from 'vue-lazyload'
+import loading from './common/images/1.jpg'
+ Vue.use(VueLazyload, {
+  loading
+})
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  router,
   components: { App },
-  template: '<App/>'
+  template: '<App/>',
+  router,
+  store
 })

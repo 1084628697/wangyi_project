@@ -1,4 +1,4 @@
-# wangyi_project
+# vuestudy
 
 > A Vue.js project
 

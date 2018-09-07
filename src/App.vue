@@ -1,23 +1,31 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
+  <div class="main">
     <router-view/>
+    <Footer v-if="$route" v-show="$route.meta.isShow"/>
   </div>
 </template>
-
 <script>
+  import Footer from './components/Footer/Footer.vue'
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    Footer
+  },
+  mounted () {
+    //dispath分发action  更新数据
+    this.$store.dispatch('getFocusList')
+    this.$store.dispatch('getTagList')
+    this.$store.dispatch('getnewitemlists')
+    this.$store.dispatch('getnewitemlists2')
+    this.$store.dispatch('getflashSaleIndexVO')
+    this.$store.dispatch('gettopicLists')
+    this.$store.dispatch('getcateList')
+  }
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="less" scoped>
+  .main{
+    height:100%;
+  }
 </style>
