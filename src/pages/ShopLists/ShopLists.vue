@@ -1,6 +1,7 @@
 <template>
-  <div class="container">
-    <router-view/>
+  <div>
+    分类
+    <FooterNav/>
   </div>
 </template>
 <script>

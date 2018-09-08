@@ -1,6 +1,7 @@
 <template>
-  <div class="container">
-    <router-view/>
+  <div>
+    识物
+    <FooterNav/>
   </div>
 </template>
 <script>

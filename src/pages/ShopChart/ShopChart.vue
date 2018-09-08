@@ -1,6 +1,7 @@
 <template>
-  <div class="container">
-    <router-view/>
+  <div>
+    购物车
+    <FooterNav/>
   </div>
 </template>
 <script>
